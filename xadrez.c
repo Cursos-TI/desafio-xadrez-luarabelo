@@ -4,7 +4,9 @@ int main() {
     int casastorre = 5;
     int casasbispo = 5;
     int casasrainha = 8;
-    int contador;
+    int casascavvertical = 2;
+    int casascavhorizontal = 1;
+    int contador, i, j;
 
     printf("SIMULADOR DE MOVIMENTAÇÃO DE PEÇAS DE XADREZ\n\n");
 
@@ -15,6 +17,8 @@ int main() {
     for (contador = 1; contador <= casastorre; contador++) {
         printf("Direita\n");
     }
+
+    printf("\n");
 
     //O bispo se move em diagonal
     printf("BISPO: Movimentação Diagonal (cima-direita):\n");
@@ -37,6 +41,21 @@ int main() {
         contador++;
     } while (contador <= casasrainha);
 
+    printf("\n");
+
+    //cavalo se move em "L"
+    printf("CAVALO: Movimentação em L (baixo, baixo, esquerda):\n");
+    
+      for (i = 1; i <= casascavvertical; i++) { //2 casas para baixo
+        printf("Baixo\n"); 
+    }
+
+    j = 1;
+    while (j <= casascavhorizontal) { //1 casa para esquerda
+        printf("Esquerda\n");
+        j++;
+    }
+    
     printf("\n====== FIM DA SIMULAÇÃO =====\n");
     return 0;
 }
